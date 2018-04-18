@@ -41,6 +41,10 @@ import { ContactCreateComponent } from '../pages/contacts/contact-create/contact
 import { CoinListComponent } from '../pages/coin/coin-list/coin-list.component';
 import { WalletCreateComponent } from '../pages/wallet/wallet-create/wallet-create.component';
 import { WalletInfoComponent } from '../pages/wallet/wallet-info/wallet-info.component';
+import {Native} from '../providers/Native';
+import {Logger} from '../providers/Logger';
+import {Validators} from '../providers/Validators';
+import {BaseComponent} from './BaseComponent';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -50,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
+    BaseComponent,
     AppComponent,
     TabsComponent,
     HomeComponent,
@@ -94,7 +99,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClient,
     RouterUtil,
     Config,
-    LocalStorage
+    LocalStorage,
+    Native,
+    Logger,
+    Validators
   ],
   bootstrap: [AppComponent]
 })

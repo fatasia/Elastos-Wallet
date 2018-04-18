@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import {BaseComponent} from '../../app/BaseComponent';
 
 @Component({
   selector: 'app-coin',
   templateUrl: './coin.component.html',
   styleUrls: ['./coin.component.less']
 })
-export class CoinComponent implements OnInit {
+export class CoinComponent  extends BaseComponent implements OnInit  {
 
-  constructor() { }
 
   ngOnInit() {
   }

@@ -33,7 +33,6 @@ import { WalletInfoComponent } from '../pages/wallet/wallet-info/wallet-info.com
 /**Route Config*/
 const routes: Routes = [
   {path: '', component: TabsComponent},  // 根目录和默认目录
-  {path: '**', component: TabsComponent},
 
   {path: 'launcher', component: LauncherComponent}, // 启动页面
 
@@ -65,6 +64,9 @@ const routes: Routes = [
 
   {path: 'settings', component: SettingsComponent}, // 设置页面
   {path: 'result', component: ResultComponent}, // 处理结果页面，成功/失败
+
+  {path: '**', component: TabsComponent},
+
 
 ];
 

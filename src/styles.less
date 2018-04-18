@@ -4,14 +4,31 @@
 
 @color-main: #0070C9;
 @color-back: #fff;
+@size-font:14em;
+@size-radius:5px;
 
-@font-size = 14em;
+@weuiBtnPrimaryActiveBg:@color-main;
 
 html, body, app-root, example-tarbar, example-layout {
   height: 100%;
   display: block;
-@font-size = 14 em;
+  font-size: @size-font;
 
 }
+
+.button-default{
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  background-color: @color-main;
+  color: #fff;
+  text-align: center;
+  border-radius: @size-radius;
+  height: 40px;
+  line-height: 40px;
+}
+
+
 
 

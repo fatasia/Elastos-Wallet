@@ -6,5 +6,9 @@
 
 
   "tab-home":"首页",
-  "tab-my":"我的"
+  "tab-my":"我的",
+
+  "launcher-create-wallet":"创建钱包",
+  "launcher-backup-import":"从备份中导入"
+
 }

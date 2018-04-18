@@ -13,6 +13,9 @@ export class RouterUtil {
   }
 
 
+  getRouteInstance() {
+    return this.router;
+  }
 
   /***
    * 路由跳转
