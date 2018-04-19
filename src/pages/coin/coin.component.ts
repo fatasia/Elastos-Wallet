@@ -1,5 +1,5 @@
 import {BaseComponent} from '../../app/BaseComponent';
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 
 
 @Component({
@@ -11,7 +11,6 @@ import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 export class CoinComponent extends BaseComponent implements OnInit {
 
 
-
   transferList = [
     {},
     {},
@@ -21,8 +20,7 @@ export class CoinComponent extends BaseComponent implements OnInit {
   coinCount = 1.2;
 
   ngOnInit() {
-    this.header.initHeader('ELA');
-    this.log.info('coin');
+    this.setTitle('ELA');
   }
 
 

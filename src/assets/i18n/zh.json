@@ -15,6 +15,12 @@
   "coin-recent-transfer":"最近转账记录",
 
   "text-receive":"接收",
-  "text-transfer":"发送"
+  "text-transfer":"发送",
 
+  "text-memory":"已经记下了",
+  "text-mnemonic":"助记词",
+  "text-mnemonic-check":"验证助记词",
+
+  "confirm":"确认",
+  "cancel":"取消"
 }
