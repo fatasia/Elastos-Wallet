@@ -11,6 +11,14 @@ export class Config {
 
   }
 
+  /**
+   * 币种列表
+   * @type {{id: string; name: string}[]}
+   */
+  static COIN_LIST = [
+    {id: '0', name: 'ELA'}
+  ];
+
   static test: any = '';
 }
 

@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
+import { Component, OnInit } from '@angular/core';
+
+import {BaseComponent} from './BaseComponent';
 
 
 
@@ -9,25 +10,14 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./app.component.less'],
 
 })
-export class AppComponent {
-  title = 'app';
+export class AppComponent extends BaseComponent  implements OnInit{
 
-  constructor(private translate: TranslateService) {
-    translate.addLangs(['zh', 'en']);
-    translate.setDefaultLang('zh');
 
-    const broswerLang = translate.getBrowserLang();
-    translate.use(broswerLang.match(/en|zh/) ? broswerLang : 'zh');
+  ngOnInit() {
+    console.log(this.header.getHeaderDisplay());
+
   }
 
 
-  changeLang(lang) {
-    console.log(lang);
-    this.translate.use(lang);
-  }
 
-  getLang() {
-    console.log(this.translate.getBrowserLang());
-    console.log(this.translate.getBrowserCultureLang());
-  }
 }

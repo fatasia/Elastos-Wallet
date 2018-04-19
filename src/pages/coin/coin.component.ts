@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BaseComponent} from '../../app/BaseComponent';
 
 @Component({
@@ -6,10 +6,14 @@ import {BaseComponent} from '../../app/BaseComponent';
   templateUrl: './coin.component.html',
   styleUrls: ['./coin.component.less']
 })
-export class CoinComponent  extends BaseComponent implements OnInit  {
+export class CoinComponent extends BaseComponent implements OnInit {
+
+
 
 
   ngOnInit() {
+    this.header.initHeader('ELA');
+    this.log.info('coin');
   }
 
 }

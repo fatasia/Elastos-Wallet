@@ -17,6 +17,7 @@ import {LocalStorage} from './../providers/Localstorage';
 
 /**pages*/
 import {AppComponent} from './app.component';
+import {HeaderComponent} from './header/app.header';
 import {TabsComponent} from './../pages/tabs/tabs.component';
 import {HomeComponent} from './../pages/tabs/home/home.component';
 import {MyComponent} from './../pages/tabs/my/my.component';
@@ -54,6 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
+    HeaderComponent,
     BaseComponent,
     AppComponent,
     TabsComponent,
@@ -102,7 +104,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LocalStorage,
     Native,
     Logger,
-    Validators
+    Validators,
+    HeaderComponent
   ],
   bootstrap: [AppComponent]
 })
