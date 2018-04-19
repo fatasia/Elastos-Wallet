@@ -7,6 +7,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {WeUiModule} from 'ngx-weui';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { QRCodeModule } from 'angular2-qrcode';
 
 
 /**provider*/
@@ -81,7 +82,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactCreateComponent,
     CoinListComponent,
     WalletCreateComponent,
-    WalletInfoComponent,
+    WalletInfoComponent
   ],
   imports: [
     AppRoutingModule,
@@ -94,7 +95,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: (HttpLoaderFactory),
         deps: [HttpClient]
       }
-    })
+    }),
+    QRCodeModule
   ],
   providers: [
     HttpClientModule,

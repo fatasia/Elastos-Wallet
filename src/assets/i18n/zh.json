@@ -9,6 +9,12 @@
   "tab-my":"我的",
 
   "launcher-create-wallet":"创建钱包",
-  "launcher-backup-import":"从备份中导入"
+  "launcher-backup-import":"从备份中导入",
+
+
+  "coin-recent-transfer":"最近转账记录",
+
+  "text-receive":"接收",
+  "text-transfer":"发送"
 
 }

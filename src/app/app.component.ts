@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import {BaseComponent} from './BaseComponent';
+import {HeaderComponent, Header} from './header/app.header';
+
 
 
 
@@ -10,13 +12,8 @@ import {BaseComponent} from './BaseComponent';
   styleUrls: ['./app.component.less'],
 
 })
-export class AppComponent extends BaseComponent  implements OnInit{
+export class AppComponent extends BaseComponent {
 
-
-  ngOnInit() {
-    console.log(this.header.getHeaderDisplay());
-
-  }
 
 
 

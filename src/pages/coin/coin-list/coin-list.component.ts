@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BaseComponent} from '../../../app/BaseComponent';
 
 @Component({
@@ -6,7 +6,16 @@ import {BaseComponent} from '../../../app/BaseComponent';
   templateUrl: './coin-list.component.html',
   styleUrls: ['./coin-list.component.less']
 })
-export class CoinListComponent  extends BaseComponent implements OnInit  {
+export class CoinListComponent extends BaseComponent implements OnInit {
+
+  coinList = [
+    {name: 'ELA', open: true},
+    {name: 'BTC', open: false}
+  ];
+
+  onSelect(item) {
+    item.open = ! item.open;
+  }
 
 
   ngOnInit() {

@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
+
 /**pages*/
 import {AppComponent} from './app.component';
 import {TabsComponent} from './../pages/tabs/tabs.component';
@@ -47,7 +48,7 @@ const routes: Routes = [
 
   // 币种
   {path: 'coin/:id', component: CoinComponent}, // 币种主页面
-  {path: 'coin/:id/list', component: CoinListComponent}, // 币种列表
+  {path: 'coinlist', component: CoinListComponent}, // 币种列表
   {path: 'coin/:id/receive', component: ReceiveComponent}, // 收账
   {path: 'coin/:id/record', component: RecordComponent}, // 交易记录
   {path: 'coin/:id/transfer', component: TransferComponent}, // 转账

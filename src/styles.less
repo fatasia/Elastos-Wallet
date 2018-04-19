@@ -5,8 +5,12 @@
 @color-main: #0070C9;
 @color-background:#fff;
 @color-back: #fff;
+@color-font-default:#030303;
 @size-font:1em;
 @size-radius:5px;
+
+@header-height : 48px;
+
 
 @weuiBtnPrimaryActiveBg:@color-main;
 
@@ -20,7 +24,7 @@ html, body, app-root, example-tarbar, example-layout {
   height: 100%;
   display: block;
   font-size: @size-font;
-
+  color: @color-font-default;
 }
 
 body, input, textarea {
@@ -96,6 +100,17 @@ a ,a:hover{
   float: right;
 }
 
+
+.header-height{
+  // margin-top: 45px;
+  //overflow: hidden;
+  height: @header-height;
+  display: block;
+}
+
+app-header{
+  .header-height;
+}
 
 
 .button-default{
