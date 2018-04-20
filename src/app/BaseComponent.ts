@@ -1,7 +1,7 @@
 import {Component, OnInit, ChangeDetectorRef, ViewChild, AfterViewInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {RouterUtil} from './../providers/RouterUtil';
-import {Logger} from './../providers/Logger';
+import {RouterUtil} from '../providers/RouterUtil';
+import {Logger} from '../providers/Logger';
 import {Location} from '@angular/common';
 import {Config} from '../providers/Config';
 import {TranslateService} from '@ngx-translate/core';

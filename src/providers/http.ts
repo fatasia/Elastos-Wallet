@@ -1,20 +1,15 @@
-import {  HttpClient  } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import {Logger} from "./logger";
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Logger} from './Logger';
 import 'rxjs/add/operator/toPromise';
-
-
 
 
 @Injectable()
 export class HttpProvider {
 
 
-
-  constructor(
-    private http: HttpClient,
-    private logger: Logger,
-  ){
+  constructor(private http: HttpClient,
+              private logger: Logger) {
     this.logger.info('Http initialized.');
   }
 
@@ -25,7 +20,7 @@ export class HttpProvider {
    */
   public request(params: any): any {
     // POST请求（参数、返回值类型都是任意类型）
-    if (params['method'] == 'post' || params['method'] == 'POST') {
+    if (params['method'] === 'post' || params['method'] === 'POST') {
       return this.post(params['url'], params['data']);
     } else { // 其他请求
       return this.get(params['url'], params['data']);
@@ -39,7 +34,7 @@ export class HttpProvider {
    * @returns {Promise<R>|Promise<U>}
    */
   public get(url: string, params: any): any {
-    return this.http.get(url,params)
+    return this.http.get(url, params)
       .toPromise()
       .then(this.handleSuccess)
       .catch(res => this.handleError(res));
@@ -64,7 +59,7 @@ export class HttpProvider {
    * @returns {{data: (string|null|((node:any)=>any)
  */
   private handleSuccess(res: any) {
-    let body = res["_body"];
+    const body = res['_body'];
     // console.log("接口返回的成功信息：" + body)
     if (body) { // 有数据返回
       return {
@@ -74,7 +69,7 @@ export class HttpProvider {
         statusText: res.statusText,
         status: res.status,
         success: true
-      }
+      };
     } else { // 无数据返回
       return {
         data: res.json().data || {}, // 返回内容
@@ -83,7 +78,7 @@ export class HttpProvider {
         statusText: res.statusText,
         status: res.status,
         success: true
-      }
+      };
     }
   }
 
